@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <div class="previous-display"></div>
+            <div class="current-display">0</div>
+        </div>
+        <div class="buttons">
+            <div class="operations">
+                <div class="clear operation" data-action="clear">AC</div>
+                <div class="delete operation" data-action="delete">DEL</div>
+                <div class="operator operation" data-operation="%">%</div>
+                <div class="operator operation" data-operation="/">÷</div>
+            </div>
+            <div class="numbers">
+                <div class="number" data-number="7">7</div>
+                <div class="number" data-number="8">8</div>
+                <div class="number" data-number="9">9</div>
+                <div class="number" class="operator" data-operation="*">*</div>
+            </div>
+            <div class="numbers">
+                <div class="number" data-number="7">4</div>
+                <div class="number" data-number="5">5</div>
+                <div class="number" data-number="6">6</div>
+                <div class="number" class="operator" data-operation="-">-</div>
+            </div>
+            <div class="numbers">
+                <div class="number" data-number="1">1</div>
+                <div class="number" data-number="2">2</div>
+                <div class="number" data-number="3">3</div>
+                <div class="operator number" data-operation="+">+</div>
+            </div>
+            <div class="zero-and-calculate">
+                <div  class="zero number" data-number="0">0</div>
+                <div class="number" data-number=".">.</div>
+                <div class="equals number" data-action="calculate">=</div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

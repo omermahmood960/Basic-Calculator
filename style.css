@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background:  linear-gradient(135deg, #1e1e2f, #3a3a5c); */
+}
+
+.calculator {
+    margin: 20px auto;
+    max-width: 350px;
+    background: #24243e;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+.display {
+    background: #14142b;
+    border-radius: 12px;
+    padding: 20px 15px;
+    margin-bottom: 20px;
+    text-align: right;
+    overflow: hidden;
+}
+.previous-display {
+    font-size: 20px;
+    min-height: 22px;
+    color: #8b8ba7;
+}
+.current-display {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.numbers, .operations {
+    display: flex;
+    margin-top: 20px;
+}
+.operations {
+    gap: 30px;
+    margin: 0 auto;
+}
+.numbers {
+    gap: 38px;
+}
+.operations > div, .numbers > div, .zero-and-calculate > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    color: #fff;
+    background: #33334d;
+    transition: transform 0.1s ease, background 0.2s ease;
+}
+.operation {
+    padding: 10px;
+    font-size: 25px;
+}
+.buttons .numbers .number {
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 10px;
+}
+.operations > div:hover,
+.numbers > div:hover {
+    background: #45456b;
+}
+.operations > div:active,
+.numbers > div:active {
+    transform: scale(0.95);
+}
+.operator {
+    background: #ff9f43 !important;
+    color: #fff;
+}
+.operator:hover {
+    background: #ffb266 !important;
+}
+.clear {
+    background: #ff5e5e !important;
+}
+ 
+.clear:hover {
+    background: #ff7d7d !important;
+}
+.delete {
+    background: #5e6bff !important;
+}
+ 
+.delete:hover {
+    background: #7c86ff !important;
+}
+.equals {
+    background: #2ecc71 !important;
+}
+ 
+.equals:hover {
+    background: #45d883 !important;
+}
+.zero {
+    grid-column: span 2;
+}
+.zero-and-calculate{
+    display: grid;
+    font-size: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+@media (max-width: 360px) {
+    .calculator {
+        width: 95vw;
+    }
+ 
+    .current-display {
+        font-size: 2rem;
+    }
+}
